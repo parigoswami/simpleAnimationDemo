@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animationOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="firstvc" storyboardIdentifier="firstvc" id="BYZ-38-t0r" customClass="ViewController" customModule="animationOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -58,11 +58,37 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="secondTextView" destination="NzN-YW-0nf" id="kZ0-e3-pxM"/>
+                        <outlet property="secondView" destination="kzc-vv-bFX" id="PIo-Vz-myd"/>
+                        <outlet property="textField" destination="B7c-74-g6x" id="fXE-HI-Mdj"/>
                         <outlet property="viewObject" destination="qFR-xy-vY6" id="pG3-rH-IPx"/>
                         <outlet property="visualEffectView" destination="Jkr-l0-KjO" id="Gae-O0-hMY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="kzc-vv-bFX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="hello how r y" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NzN-YW-0nf">
+                            <rect key="frame" x="67" y="20" width="240" height="87"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="21"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WlC-Hd-vMS">
+                            <rect key="frame" x="164" y="109" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Done"/>
+                            <connections>
+                                <action selector="secondDonebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qsm-KK-VMU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view contentMode="scaleToFill" id="qFR-xy-vY6">
                     <rect key="frame" x="0.0" y="0.0" width="364" height="168"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,6 +108,13 @@
                                 <action selector="dismissPopUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qeP-M5-j8t"/>
                             </connections>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Text Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B7c-74-g6x">
+                            <rect key="frame" x="16" y="69" width="332" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>

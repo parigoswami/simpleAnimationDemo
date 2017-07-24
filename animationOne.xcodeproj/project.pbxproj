@@ -514,6 +514,7 @@
 				4FD864391F224EF2003CD0C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FD8643A1F224EF3003CD0C8 /* Build configuration list for PBXNativeTarget "animationOneTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				4FD8643C1F224EF3003CD0C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FD8643D1F224EF3003CD0C8 /* Build configuration list for PBXNativeTarget "animationOneUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				4FD8643F1F224EF3003CD0C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
