@@ -12,11 +12,9 @@ class myTableViewController: UITableViewController {
 
     let vc=ViewController()
     var countValue : Int = 0
-    var tempArr = [String]()
+    var tempArr = Array<Any>()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate=self
-        tableView.dataSource=self
         tableView.reloadData()
         
         print("Value of tempArr _____",tempArr)
@@ -41,18 +39,14 @@ class myTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        countValue=vc.myArr.count
-        return countValue
+        return tempArr.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        let text=tempArr[indexPath.row]
         
-        print("Value of Text Variable is ________",text)
-        
-        cell.textLabel?.text=text
+        cell.textLabel?.text=tempArr[indexPath.row] as? String
         // Configure the cell...
         return cell
     }

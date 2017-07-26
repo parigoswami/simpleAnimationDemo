@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     var returnedText : String = " "
     var effect = UIVisualEffect()
     
-    var myArr=[String]()
+    var myArr=Array<Any>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
