@@ -7,23 +7,62 @@
 //
 
 import UIKit
+import CoreData
 
 class myTableViewController: UITableViewController {
 
     let vc=ViewController()
     var countValue : Int = 0
     var tempArr = Array<Any>()
+    var tempString = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
         
+        
         print("Value of tempArr _____",tempArr)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        print("_____\n Value of temp String is ",tempString)
+        
+        save(name: tempString)
     }
+    
+    func save(name:String){
+        var TasksObj : [NSManagedObject] = []
+        guard let appDelegate =
+            UIApplication.shared.delegate as? AppDelegate else {
+                return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity =
+            NSEntityDescription.entity(forEntityName: "Tasks",
+                                       in: managedContext)!
+        let person = NSManagedObject(entity: entity,
+                                     insertInto: managedContext)
+         person.setValue(name, forKeyPath: "mydata")
+        
+        do {
+            try managedContext.save()
+            TasksObj.append(person)
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        
+    }
+    
+//    func save(){
+//        let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
+//        let context =   appDelegate.persistentContainer.viewContext
+//        let entity = NSEntityDescription.entity(forEntityName: "Tasks", in: context)
+//        let manObj = NSManagedObject(entity: entity!, insertInto: context)
+//        manObj.setValue(tempArr, forKey: "mydata")
+//        do {
+//            try context.save()
+//        } catch let error as NSError {
+//            print("Having an error",error.localizedDescription)
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,8 +90,6 @@ class myTableViewController: UITableViewController {
         return cell
     }
     
-    
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -65,16 +65,18 @@ class ViewController: UIViewController {
         print("_______________rturnedText is : ",(returnedText))
         myArr.append(returnedText)
         print("______myArr is ",myArr)
+        textField.clearButtonMode = UITextFieldViewMode.whileEditing
+        textField.clearsOnBeginEditing = true
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let secondvc : myTableViewController = segue.destination as! myTableViewController
         secondvc.tempArr = myArr
+        secondvc.tempString=returnedText
     }
     
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

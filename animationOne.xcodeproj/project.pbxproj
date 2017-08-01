@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F843C3A1F28E9D40007640B /* myModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F843C381F28E9D40007640B /* myModel.xcdatamodeld */; };
 		4F86EDF01F27A7C5000612EB /* myTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86EDEF1F27A7C5000612EB /* myTableViewController.swift */; };
 		4FD864131F224EF2003CD0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD864121F224EF2003CD0C8 /* AppDelegate.swift */; };
 		4FD864151F224EF2003CD0C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD864141F224EF2003CD0C8 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F843C391F28E9D40007640B /* myModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = myModel.xcdatamodel; sourceTree = "<group>"; };
 		4F86EDEF1F27A7C5000612EB /* myTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myTableViewController.swift; sourceTree = "<group>"; };
 		4FD8640F1F224EF2003CD0C8 /* animationOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animationOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD864121F224EF2003CD0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4FD864141F224EF2003CD0C8 /* ViewController.swift */,
 				4F86EDEF1F27A7C5000612EB /* myTableViewController.swift */,
 				4FD864161F224EF2003CD0C8 /* Main.storyboard */,
+				4F843C381F28E9D40007640B /* myModel.xcdatamodeld */,
 				4FD864191F224EF2003CD0C8 /* Assets.xcassets */,
 				4FD8641B1F224EF2003CD0C8 /* LaunchScreen.storyboard */,
 				4FD8641E1F224EF2003CD0C8 /* Info.plist */,
@@ -268,6 +271,7 @@
 				4FD864151F224EF2003CD0C8 /* ViewController.swift in Sources */,
 				4F86EDF01F27A7C5000612EB /* myTableViewController.swift in Sources */,
 				4FD864131F224EF2003CD0C8 /* AppDelegate.swift in Sources */,
+				4F843C3A1F28E9D40007640B /* myModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +543,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4F843C381F28E9D40007640B /* myModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4F843C391F28E9D40007640B /* myModel.xcdatamodel */,
+			);
+			currentVersion = 4F843C391F28E9D40007640B /* myModel.xcdatamodel */;
+			name = myModel.xcdatamodeld;
+			path = ../myModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4FD864071F224EF0003CD0C8 /* Project object */;
 }
